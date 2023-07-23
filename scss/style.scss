@@ -5,3 +5,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    color: #fff;
+    /* Establece la imagen de fondo */
+    background-image: url("../img/body-bg.jpg");
+    /* Ajusta el tamaño de la imagen de fondo */
+    background-size: cover;
+    /* Ajusta la posición de la imagen de fondo */
+    background-position: center;
+    /* Asegura que la imagen de fondo cubra toda la ventana */
+    width: 100vw;
+    height: 100vh;
+    /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
+    /* Asegura que la imagen de fondo esté fija y no se desplace con el contenido */
+    background-attachment: fixed;
+}
+
+  /* Pseudoelemento para aplicar blur solo al fondo del body */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Hereda la imagen de fondo del body */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.5); /* Ajusta el valor para aumentar o disminuir el desenfoque */
+    z-index: -1; /* Coloca el pseudoelemento detrás del contenido del body */
+}
+
+
+.navbar-2 {
+    padding: 15px 0 15px 0;
+    .navbar-brand-color {
+        color: #fff;
+    }
+    .nav-item-2 {
+        margin: 0 20px;
+    }
+    & .nav-item-2:hover {
+        text-decoration: underline;
+        background-color: #80808050;
+    }
+    .nav-link-color {
+        color: #fff;
+    }
+    .span-item {
+        padding: 8px 10px;
+        position: absolute;
+        right: 100px;
+        .span-link {
+            text-decoration: none;
+            color: #fff;
+            background: none;
+        }
+    }
+    & .span-item:hover {
+        background-color: #80808030;
+        text-decoration: underline;
+    }
+}
+
+.main-container {
+    /* Estilos para los íconos */
+    .img-icon {
+        margin: 10px; /* Ajusta el margen para separar los íconos */
+        width: 50px; /* Ajusta el tamaño de los íconos según tus preferencias */
+        height: 50px;
+        border-radius: 50%; /* Hace que los íconos tengan forma circular */
+        position: relative; /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
+    }
+}
