@@ -1,7 +1,5 @@
 @charset "UTF-8";
-::after
-::before
-* {
+::after ::before * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -63,41 +61,75 @@ body::before {
     text-decoration: underline; }
 
 .main-container {
-  margin-top: 20px;
-  /* Estilos para los íconos */ }
-  .main-container .g-first-div {
+  margin-top: 20px; }
+  .main-container .first-div {
     perspective: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .main-container .g-first-div .h1-name {
-      margin: 15px 0; }
-    .main-container .g-first-div .profile-pic {
+    .main-container .first-div .h1-name {
+      margin: 15px 0;
+      font-size: 30px; }
+    .main-container .first-div .profile-pic {
       border-radius: 50%;
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       margin-top: 20px; }
-    .main-container .g-first-div .main-list {
+    .main-container .first-div .main-list {
       display: flex;
       justify-content: center;
       margin-top: 15px;
       padding: 20px;
       list-style: none; }
-      .main-container .g-first-div .main-list .list-element {
+      .main-container .first-div .main-list .list-element {
         margin-right: 100px;
         margin-left: 100px; }
-    .main-container .g-first-div .g-second-div {
-      margin: 20px 0; }
-      .main-container .g-first-div .g-second-div .h3-icons {
-        background-color: #fff;
-        color: #000; }
-  .main-container .img-icon {
-    margin: 10px;
-    /* Ajusta el margen para separar los íconos */
-    width: 50px;
-    /* Ajusta el tamaño de los íconos según tus preferencias */
-    height: 50px;
-    border-radius: 50%;
-    /* Hace que los íconos tengan forma circular */
-    position: relative;
-    /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */ }
+  .main-container .sec-div {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main-container .sec-div .h3-item {
+      display: inline-block; }
+    .main-container .sec-div .container-img-icon .img-icon {
+      background-color: #80808070;
+      margin: 10px;
+      /* Ajusta el margen para separar los íconos */
+      width: 50px;
+      /* Ajusta el tamaño de los íconos según tus preferencias */
+      height: 50px;
+      border-radius: 50%;
+      /* Hace que los íconos tengan forma circular */
+      position: relative;
+      /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
+      transition: transform 1s;
+      animation: rotate 5s infinite; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+      .main-container .sec-div .container-img-icon .img-icon:hover {
+        animation-play-state: paused; }
+
+#education {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, 5rem); }
+  #education .education-subtitle {
+    display: flex;
+    justify-content: center;
+    border: solid black;
+    grid-column: 1 / 4;
+    grid-template-rows: 1 / 2; }
+  #education .education-first-item, #education .education-second-item {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center; }
+  #education .education-second-item {
+    grid-row: 3 / 4; }

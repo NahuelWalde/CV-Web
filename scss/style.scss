@@ -72,18 +72,19 @@ body::before {
 
 .main-container {
     margin-top: 20px;
-    .g-first-div {
+    .first-div {
         perspective: 1000px;
         display: flex;
         flex-direction: column;
         align-items: center;
         .h1-name {
             margin: 15px 0;
+            font-size: 30px;
         }
         .profile-pic {
             border-radius: 50%;
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             margin-top: 20px;
         }
         .main-list {
@@ -97,20 +98,65 @@ body::before {
                 margin-left: 100px;
             }
         }
-    .g-second-div {
-        margin: 20px 0;
-        .h3-icons {
-        background-color: #fff;
-        color: #000;
+    }
+    .sec-div {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .h3-item {
+            display: inline-block;
+        }
+        .container-img-icon {
+            .img-icon {
+                background-color: #80808070;
+                margin: 10px; /* Ajusta el margen para separar los íconos */
+                width: 50px; /* Ajusta el tamaño de los íconos según tus preferencias */
+                height: 50px;
+                border-radius: 50%; /* Hace que los íconos tengan forma circular */
+                position: relative; /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
+                transition: transform 1s;
+                animation: rotate 5s infinite;
+
+                @keyframes rotate {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
         }
     }
 }
-    /* Estilos para los íconos */
-    .img-icon {
-        margin: 10px; /* Ajusta el margen para separar los íconos */
-        width: 50px; /* Ajusta el tamaño de los íconos según tus preferencias */
-        height: 50px;
-        border-radius: 50%; /* Hace que los íconos tengan forma circular */
-        position: relative; /* Establece la posición relativa para que el pseudo-elemento se posicione correctamente */
+
+
+#education {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, 5rem);
+    .education-subtitle {
+        display: flex;
+        justify-content: center;
+        border: solid black;
+        grid-column: 1 / 4;
+        grid-template-rows: 1 / 2;
+    }
+    .education-first-item {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .education-second-item {
+        @extend .education-first-item;
+        grid-row: 3 / 4;
     }
 }
