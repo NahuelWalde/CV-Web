@@ -131,33 +131,33 @@ body::before {
     grid-row: 2 / 3; }
     #education .education-first-item .logo-view, #education .education-second-item .logo-view, #education .education-third-item .logo-view {
       border-radius: 50%;
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
   #education .education-second-item {
     grid-column: 2 / 3; }
     #education .education-second-item .logo-view {
       border-radius: 50%;
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
   #education .education-third-item {
     grid-column: 3 / 4; }
     #education .education-third-item .logo-view {
       border-radius: 50%;
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
   #education .education-fourth-item, #education .education-fifth-item {
     grid-column: 1 / 2;
     grid-row: 3 / 4; }
     #education .education-fourth-item .logo-view, #education .education-fifth-item .logo-view {
       border-radius: 50%;
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
   #education .education-fifth-item {
     grid-column: 3 / 4; }
     #education .education-fifth-item .logo-view {
       border-radius: 50%;
-      width: 150px;
-      height: 150px; }
+      width: 100px;
+      height: 100px; }
 
 #experience {
   margin-top: 20px;
