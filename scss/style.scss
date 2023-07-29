@@ -76,7 +76,6 @@ body::before {
 .main-container {
     margin-top: 20px;
     .first-div {
-        perspective: 1000px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -140,8 +139,9 @@ body::before {
 #education {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px repeat(2, 1fr);
+    flex-wrap: wrap;
     .education-subtitle {
         display: flex;
         justify-content: center;
@@ -152,10 +152,16 @@ body::before {
     .education-first-item {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        .logo-view {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
+        max-width: 100%;
+        height: auto;
+        .img-container {
+            max-width: 100%;
+            height: auto;
+            .logo-view {
+                border-radius: 50%;
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
     .education-second-item {
@@ -163,8 +169,8 @@ body::before {
         grid-column: 2 / 3;
         .logo-view {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            max-width: 100%;
+            height: auto;
         }
     }
     .education-third-item {
@@ -172,8 +178,8 @@ body::before {
         grid-column: 3 / 4;
         .logo-view {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            max-width: 100%;
+            height: auto;
         }
     }
     .education-fourth-item {
@@ -181,8 +187,8 @@ body::before {
         grid-row: 3 / 4;
         .logo-view {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            max-width: 100%;
+            height: auto;
         }
     }
     .education-fifth-item {
@@ -190,8 +196,8 @@ body::before {
         grid-column: 3 / 4;
         .logo-view {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            max-width: 100%;
+            height: auto;
         }
     }
 }
@@ -206,6 +212,9 @@ body::before {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .exp-description {
+            align-content: center;
+        }
     }
     
 }
@@ -228,4 +237,55 @@ body::before {
         text-decoration: none;
         color: black; /* Cambia el color del ícono si es necesario */
     }
+}
+
+
+/* // Media queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    #education {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100px repeat(6, 1fr);
+        .education-subtitle {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .education-first-item {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .education-second-item {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .education-third-item {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+        .education-fourth-item {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+        .education-fifth-item {
+            grid-column: 1 / 2;
+            grid-row: 6 / 7;
+        }
+    }
+}
+
+/* // Medium devices (tablets, 577px and up) */
+@media screen and (min-width: 577px) {
+    
+}
+
+/* // Larges devices (tablet, 769px and up */
+@media screen and (min-width: 769px) {
+    
+}
+
+/* // X-Large (desktops, 993px and up) */
+@media screen and (min-width: 993px) {
+    
 }
