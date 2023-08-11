@@ -3,103 +3,156 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="exp-description" content="Aspiring full-stack developer and programmer, pursuing comprehensive studies in full-stack development and programming. Explore my curriculum vitae to learn about my skills, projects, and educational journey in web development.">
+        <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JS, BOOTSTRAP, NODEJS, CV, CURRICULUM, CURRICULUM VITAE, WEB DESING, WEB DEVELOPMENT, PROGRAMMING">
         <title>Curriculum Vitae</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg navbar-2">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">CV</a>
+                <a class="navbar-brand navbar-brand-color" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon nb-t-icon-color"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#objetives">Objetives</a>
+                        <li class="nav-item nav-item-2">
+                            <a class="nav-link nav-link-color" href="#objetives">Objetives</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education">Education</a>
+                        <li class="nav-item nav-item-2">
+                            <a class="nav-link nav-link-color" href="#education">Education</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
+                        <li class="nav-item nav-item-2">
+                            <a class="nav-link nav-link-color" href="#experience">Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Contact</a>
+                        <li class="nav-item nav-item-2">
+                            <a class="nav-link nav-link-color" href="">Contact</a>
                         </li>
                     </ul>
-                    <button>
-                        <a href="./pages/portfolio.html">Porfolio</a>
-                    </button>
+                    <span class="span-item">
+                        <a class="span-link" href="./pages/portfolio.html">Porfolio</a>
+                    </span>
                 </div>
             </div>
         </nav>
         
-        <main>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <h1>Nahuel Ezequiel Walde Dominguez</h1>
-                        <img src="./img/profile-pic.jpg" alt="PROFILE PIC">
-                        Male
-                        24 years old
-                        Buenos Aires, Argentina
+        <main class="main-container">
+            <div class="grid text-center">
+                <div class="g-col-4 first-div">
+                    <h1 class="h1-name">Nahuel Ezequiel Walde Dominguez</h1>
+                    <img class="profile-pic" src="./img/profile-pic.jpg" alt="PROFILE PIC">
+                    <ul class="main-list">
+                        <li class="list-element">Argentina</li>
+                        <li class="list-element">24 years old</li>
+                    </ul>
+                </div>
+                <div class="g-col-4 sec-div">
+                    <h3 class="h3-item">Currently learning</h3>
+                    <div class="container-img-icon">
+                        <img class="img-icon" src="./assets/icon-html.png" alt="HTML ICON">
+                        <img class="img-icon" src="./assets/icon-css.png" alt="CSS ICON">
+                        <img class="img-icon" src="./assets/icon-javascript.png" alt="JAVASCRIPT ICON">
+                        <img class="img-icon" src="./assets/icon-bootstrap.png" alt="BOOTSTRAP ICON">
+                        <img class="img-icon" src="./assets/icon-nodejs.png" alt="NODEJS ICON">
+                        <img class="img-icon" src="./assets/icon-sass.png" alt="SASS ICON">
+                        <img class="img-icon" src="./assets/icon-git.png" alt="GIT ICON">
+                        <img class="img-icon" src="./assets/icon-github.png" alt="GITHUB ICON">
+                        <img class="img-icon" src="./assets/icon-python.png" alt="PYTHON ICON">
                     </div>
-                    <div class="col">
-                        <img src="./assets/icon-html.png" alt="HTML ICON">
-                        <img src="./assets/icon-css.png" alt="CSS ICON">
-                        <img src="./assets/icon-javascript.png" alt="JAVASCRIPT ICON">
-                        <img src="./assets/icon-bootstrap.png" alt="BOOTSTRAP ICON">
-                        <img src="./assets/icon-nodejs.png" alt="NODEJS ICON">
-                        <img src="./assets/icon-sass.png" alt="SASS ICON">
-                        <img src="./assets/icon-git.png" alt="GIT ICON">
-                        <img src="./assets/icon-github.png" alt="GITHUB ICON">
-                        <img src="./assets/icon-python.png" alt="PYTHON ICON">
-                    </div>
-                    <div class="col">
-                        <h2 id="objetives">Objetives</h2>
-                        <p>
+                </div>
+                <div class="g-col-4 third-div">
+                    <h2 id="objetives">Objetives</h2>
+                        <p class="objectives-p">
                             I strive to be part of a dynamic and cooperative team, where I can apply my skills in the field of IT. 
                             My aspiration is to develop new expertise and knowledge while bolstering my professional path and 
-                            contributing to the organization's growth
+                            contributing to the organization's growth.
                         </p>
-                    </div>
                 </div>
             </div>
         </main>
 
         <section id="education">
             <h2 class="education-subtitle">Education</h2>
-            <article class="education-first-item">
-                <h3>Full Stack Web Development | May 2023 - Mar 2024</h3>
-                <h4>Coderhouse</h4>
-            </article>
-            <article class="education-second-item">
-                <h3>Junior Data Science Analyst | May - Oct 2023</h3>
-                <h4>National University of Lomas de Zamora</h4>
-            </article>
-            <article class="education-third-item">
-                <h3>PC Repair and Assembly | Mar - Nov 2023</h3>
-                <h4>National University of Lanús</h4>
-            </article>
-            <article class="education-fourth-item">
-                <h3>Business Administration Technician | 2014 - 2019</h3>
-                <h4>Technical School No. 11 'María De Los Remedios Escalada de San Martín'</h4>
-            </article>
-            <article class="education-fifth-item">
-                <h4>Community Management - Comprehensive Program</h4>
-                <h4>Administrative and Accounting Assistant Course - Certificate</h4>
-                <h4>Comprehensive Excel Program</h4>
-            </article>
+            <div class="education-first-item">
+                <div class="row g-0">
+                    <div class="col-md-4 img-container">
+                        <img src="./img/coderhouse-logo.png" class="img-fluid logo-view" alt="CODERHOUSE LOGO">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3>Full Stack Web Development | May 2023 - Mar 2024</h3>
+                            <h4>Coderhouse</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-second-item">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./img/unlz-logo.jpg" class="img-fluid logo-view" alt="NATIONAL UNIVERSITY OF LOMAS DE ZAMORA LOGO">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3>Junior Data Science Analyst | May - Oct 2023</h3>
+                            <h4>National University of Lomas de Zamora</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-third-item">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./img/unla-logo.png" class="img-fluid logo-view" alt="NATIONAL UNIVERSITY OF LANÚS LOGO">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3>PC Repair and Assembly | Mar - Nov 2023</h3>
+                            <h4>National University of Lanús</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-fourth-item">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./img/et5-logo.jpg" class="img-fluid logo-view" alt="SECONDARY SCHOOL LOGO">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3>Business Administration Technician | 2014 - 2019</h3>
+                            <h4>Technical School No. 11 'María De Los Remedios Escalada de San Martín'</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-fifth-item">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./img/capacitarte-logo.png" class="img-fluid logo-view" alt="CAPACITARTE LOGO">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4>Community Management - Comprehensive Program</h4>
+                            <h4>Administrative and Accounting Assistant Course - Certificate</h4>
+                            <h4>Comprehensive Excel Program</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
-        <section>
-            <h2 id="experience">Experience</h2>
-            <article>
+        <section id="experience">
+            <h2 class="experience-subtitle">Experience</h2>
+            <article class="experience-item">
                 <h3>Community Management</h3>
                 <h4>InfoPy (Paraguay) | Sep - Dec 2022</h4>
-                <p>
+                <p class="exp-description">
                     Responsible for researching news, gathering information, and writing articles, 
                     while adhering to company guidelines to communicate facts in a clear and objective manner. 
                     In charge of creating and composing content for advertising products and/or services. 
@@ -108,18 +161,18 @@
             </article>
         </section>
 
-        <footer>
-            <ul>
-                <li>
-                    <a href="https://wa.me/+549113597110">
+        <footer class="container-footer">
+            <ul class="footer-ul">
+                <li class="footer-li">
+                    <a class="f-li-a" href="https://wa.me/+549113597110">
                         <img src="./assets/icon-whatsapp.png" alt="WHATSAPP ICON">
                     </a>
                 </li>
-                <li>
-                    <a href="mailto:waldenahuel@gmail.com"><img src="./assets/icon-gmail.png" alt="E-MAIL ICON"></a>
+                <li class="footer-li">
+                    <a class="f-li-a" href="mailto:waldenahuel@gmail.com"><img src="./assets/icon-gmail.png" alt="E-MAIL ICON"></a>
                 </li>
-                <li>
-                    <a href="https://github.com/NahuelWalde?tab=repositories"><img src="./assets/icon-github.png" alt="GITHUB ICON"></a>
+                <li class="footer-li">
+                    <a class="f-li-a" href="https://github.com/NahuelWalde?tab=repositories"><img src="./assets/icon-github.png" alt="GITHUB ICON"></a>
                 </li>
             </ul>
         </footer>

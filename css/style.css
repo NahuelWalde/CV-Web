@@ -1,9 +1,12 @@
 @charset "UTF-8";
+/* Reinicio de estilización de página */
 ::after ::before * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/* Fin de estilización de página */
+/* Inicio de estilización de body */
 body {
   color: #fff;
   /* Establece la imagen de fondo */
@@ -23,22 +26,34 @@ body {
 /* Pseudoelemento para aplicar blur solo al fondo del body */
 body::before {
   content: "";
+  /* Crea un contenido ficticio para el pseudoelemento */
   position: fixed;
+  /* Fija la posición del pseudoelemento en la ventana */
   top: 0;
+  /* Alinea el borde superior del pseudoelemento con el borde superior de la ventana */
   left: 0;
+  /* Alinea el borde izquierdo del pseudoelemento con el borde izquierdo de la ventana */
   width: 100%;
+  /* Establece el ancho del pseudoelemento al 100% de la ventana */
   height: 100%;
-  background-image: inherit;
+  /* Establece la altura del pseudoelemento al 100% de la ventana */
   /* Hereda la imagen de fondo del body */
+  background-image: inherit;
+  /* Ajusta el tamaño de la imagen de fondo para cubrir toda el área */
   background-size: cover;
+  /* Alinea la imagen de fondo en el centro de la ventana */
   background-position: center;
+  /* Aplica un desenfoque y brillo a la imagen de fondo */
   filter: blur(5px) brightness(0.5);
-  /* Ajusta el valor para aumentar o disminuir el desenfoque */
-  z-index: -1;
-  /* Coloca el pseudoelemento detrás del contenido del body */ }
+  /* Coloca el pseudoelemento detrás del contenido del body */
+  z-index: -1; }
 
+/* Fin de estilización de body */
+/* Inicio de estilización del nav */
 .navbar-2 {
   padding: 15px 0 15px 0; }
+  .navbar-2 .nb-t-icon-color {
+    color: #fff; }
   .navbar-2 .navbar-brand-color {
     color: #fff; }
   .navbar-2 .nav-item-2 {
@@ -60,10 +75,12 @@ body::before {
     background-color: #80808030;
     text-decoration: underline; }
 
+/* Fin de estilización de body */
+/* Inicio de estilización del main */
 .main-container {
   margin-top: 20px; }
   .main-container .first-div {
-    perspective: 1000px;
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -85,7 +102,7 @@ body::before {
         margin-right: 100px;
         margin-left: 100px; }
   .main-container .sec-div {
-    margin: 50px 0;
+    margin: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -112,26 +129,359 @@ body::before {
     transform: rotate(360deg); } }
       .main-container .sec-div .container-img-icon .img-icon:hover {
         animation-play-state: paused; }
+  .main-container .third-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main-container .third-div #objectives {
+      align-content: center; }
+      .main-container .third-div #objectives .objective-p {
+        margin: 0 20px; }
 
+/* Fin de estilización del main */
+/* Inicio de estilización de la sección de educación */
 #education {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(5, 5rem); }
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px repeat(2, 1fr); }
   #education .education-subtitle {
     display: flex;
     justify-content: center;
-    border: solid black;
+    align-content: center;
     grid-column: 1 / 4;
-    grid-template-rows: 1 / 2; }
-  #education .education-first-item, #education .education-second-item, #education .education-third-item {
-    grid-column: 1 / 4;
+    grid-row: 1 / 2; }
+  #education .education-first-item, #education .education-third-item {
+    grid-column: 1 / 2;
     grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center; }
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px; }
+    #education .education-first-item .img-container, #education .education-third-item .img-container {
+      max-width: 100%;
+      height: auto; }
+      #education .education-first-item .img-container .logo-view, #education .education-third-item .img-container .logo-view {
+        border-radius: 50%;
+        max-width: 100%;
+        height: auto; }
   #education .education-second-item {
-    grid-row: 3 / 4; }
+    grid-column: 1 / 2;
+    grid-column: 2 / 3; }
+    #education .education-second-item .img-container {
+      max-width: 100%;
+      height: auto; }
+      #education .education-second-item .img-container .logo-view {
+        border-radius: 50%;
+        max-width: 100%;
+        height: auto; }
   #education .education-third-item {
-    grid-row: 4 / 5; }
+    grid-column: 3 / 4; }
+    #education .education-third-item .img-container {
+      max-width: 100%;
+      height: auto; }
+      #education .education-third-item .img-container .logo-view {
+        border-radius: 50%;
+        max-width: 100%;
+        height: auto; }
+  #education .education-fourth-item, #education .education-fifth-item {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4; }
+    #education .education-fourth-item .img-container, #education .education-fifth-item .img-container {
+      max-width: 100%;
+      height: auto; }
+      #education .education-fourth-item .img-container .logo-view, #education .education-fifth-item .img-container .logo-view {
+        border-radius: 50%;
+        max-width: 100%;
+        height: auto; }
+  #education .education-fifth-item {
+    grid-column: 3 / 4; }
+    #education .education-fifth-item .img-container {
+      max-width: 100%;
+      height: auto; }
+      #education .education-fifth-item .img-container .logo-view {
+        border-radius: 50%;
+        max-width: 100%;
+        height: auto; }
+
+/* Fin de estilización de la sección de educación */
+/* Inicio de estilización de la sección de experiencia laboral */
+#experience {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #experience .experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    #experience .experience-item .exp-description {
+      margin: 0 10px;
+      align-content: center; }
+
+/* Fin de estilización de experiencia laboral */
+/* Inicio de estilización footer */
+.container-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; }
+  .container-footer .footer-ul {
+    display: flex;
+    gap: 20px;
+    /* Espaciado entre cada ítem */
+    list-style: none;
+    padding: 0; }
+  .container-footer .footer-li {
+    margin: 0; }
+  .container-footer .f-li-a {
+    text-decoration: none;
+    color: black;
+    /* Cambia el color del ícono si es necesario */ }
+
+/* Fin de estilización footer */
+/* // Media queries */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  #education {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px repeat(6, 1fr); }
+    #education .education-subtitle {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2; }
+    #education .education-first-item, #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3; }
+      #education .education-first-item .img-container, #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-first-item .img-container .logo-view, #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-second-item {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
+      #education .education-second-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-second-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5; }
+      #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fourth-item, #education .education-fifth-item {
+      grid-column: 1 / 2;
+      grid-row: 5 / 6; }
+      #education .education-fourth-item .img-container, #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fourth-item .img-container .logo-view, #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fifth-item {
+      grid-column: 1 / 2;
+      grid-row: 6 / 7; }
+      #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; } }
+
+@media screen and (min-width: 577px) {
+  #education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(3, 1fr); }
+    #education .education-subtitle {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2; }
+    #education .education-first-item, #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3; }
+      #education .education-first-item .img-container, #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-first-item .img-container .logo-view, #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-second-item {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3; }
+      #education .education-second-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-second-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
+      #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fourth-item, #education .education-fifth-item {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4; }
+      #education .education-fourth-item .img-container, #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fourth-item .img-container .logo-view, #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fifth-item {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5; }
+      #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; } }
+
+/* // Larges devices (tablet, 769px and up */
+@media screen and (min-width: 769px) {
+  #education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(3, 1fr); }
+    #education .education-subtitle {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2; }
+    #education .education-first-item, #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3; }
+      #education .education-first-item .img-container, #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-first-item .img-container .logo-view, #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-second-item {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3; }
+      #education .education-second-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-second-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
+      #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fourth-item, #education .education-fifth-item {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4; }
+      #education .education-fourth-item .img-container, #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fourth-item .img-container .logo-view, #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fifth-item {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5; }
+      #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; } }
+
+/* // X-Large (desktops, 993px and up) */
+@media screen and (min-width: 993px) {
+  #education {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(2, 1fr);
+    flex-wrap: wrap; }
+    #education .education-subtitle {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      grid-column: 1 / 4;
+      grid-row: 1 / 2; }
+    #education .education-first-item, #education .education-third-item {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      max-width: 100%;
+      height: auto; }
+      #education .education-first-item .img-container, #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-first-item .img-container .logo-view, #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-second-item {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3; }
+      #education .education-second-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-second-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-third-item {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3; }
+      #education .education-third-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-third-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fourth-item, #education .education-fifth-item {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4; }
+      #education .education-fourth-item .img-container, #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fourth-item .img-container .logo-view, #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; }
+    #education .education-fifth-item {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4; }
+      #education .education-fifth-item .img-container {
+        max-width: 100%;
+        height: auto; }
+        #education .education-fifth-item .img-container .logo-view {
+          border-radius: 50%;
+          max-width: 100%;
+          height: auto; } }
